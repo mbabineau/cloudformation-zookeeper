@@ -30,7 +30,7 @@ Inbound rules are at your discretion, but you may want to include access to:
 * `8181 [tcp]` - Exhibitor HTTP port (for both web UI and REST API)
 
 ### 3. Launch the stack
-Launch the stack via the AWS console, a script, or [aws-cli](https://github.com/awscli/aws-cli)
+Launch the stack via the AWS console, a script, or [aws-cli](https://github.com/aws/aws-cli).
 
 See `zookeeper-vpc.json` for the full list of parameters, descriptions, and default values.
 
