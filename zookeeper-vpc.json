@@ -30,6 +30,10 @@
       "Description" : "Bucket for Exhibitor backups of ZK configs",
       "Type" : "String"
     },
+    "ExhibitorS3Region" : {
+      "Description" : "Region for Exhibitor backups of ZK configs",
+      "Type" : "String"
+    },
     "ExhibitorS3Prefix" : {
       "Description" : "Key prefix for S3 backups. Should be unique per S3 bucket per cluster",
       "Type" : "String"
@@ -157,6 +161,7 @@
           "   -e 'S3_PREFIX=", { "Ref" : "ExhibitorS3Prefix" }, "'",
           "   -e 'AWS_ACCESS_KEY_ID=", { "Ref" : "HostKeys" }, "'",
           "   -e 'AWS_SECRET_ACCESS_KEY=", {"Fn::GetAtt": ["HostKeys", "SecretAccessKey"]}, "'",
+          "   -e 'AWS_REGION=", { "Ref" : "ExhibitorS3Region" }, "'",
           "   -e \"HOSTNAME=`ec2metadata --public-hostname`\"",
           "   ", { "Ref": "DockerImage" }, "\n",
           "runit-service enable zk\n",

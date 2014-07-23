@@ -43,6 +43,7 @@ aws cloudformation create-stack \
     --parameters \
         ParameterKey=KeyName,ParameterValue=<key> \
         ParameterKey=ExhibitorS3Bucket,ParameterValue=<bucket> \
+        ParameterKey=ExhibitorS3Region,ParameterValue=<region> \
         ParameterKey=ExhibitorS3Prefix,ParameterValue=<cluster_name> \
         ParameterKey=VpcId,ParameterValue=<vpc_id> \
         ParameterKey=Subnets,ParameterValue='<subnet_id_1>\,<subnet_id_2>' \
