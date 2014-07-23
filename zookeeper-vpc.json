@@ -51,7 +51,7 @@
       "Type": "String"
     },
     "AvailabilityZones": {
-      "Description" : "(Optional) If passed, only launch Docker Registry nodes in these AZs (e.g., 'us-east-1a,us-east-1b'). Note: these must match up with the passed Subnets.",
+      "Description" : "(Optional) If passed, only launch nodes in these AZs (e.g., 'us-east-1a,us-east-1b'). Note: these must match up with the passed Subnets.",
       "Type" : "CommaDelimitedList",
       "Default" : ""
     }
