@@ -18,7 +18,7 @@ Note that this template must be used with Amazon VPC. New AWS accounts automatic
 
 ### 1. Clone the repository
 ```bash
-git clone git@github.com:thefactory/cloudformation-zookeeper.git
+git clone git@github.com:mbabineau/cloudformation-zookeeper.git
 ```
 
 ### 2. Create an Admin security group
