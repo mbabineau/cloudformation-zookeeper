@@ -8,12 +8,18 @@
     "InstanceType" : {
       "Description" : "EC2 instance type",
       "Type" : "String",
-      "Default" : "m1.small",
-      "AllowedValues" : [ "t1.micro","t2.micro","t2.small","t2.medium","m1.small","m1.medium","m1.large","m1.xlarge","m2.xlarge","m2.2xlarge","m2.4xlarge","m3.medium","m3.large","m3.xlarge","m3.2xlarge","c1.medium","c1.xlarge","cc1.4xlarge","cc2.8xlarge","cg1.4xlarge"],
-      "ConstraintDescription" : "must be a valid EC2 instance type."
+      "Default" : "t2.micro",
+      "AllowedValues" : [
+        "t2.micro", "t2.small", "t2.medium", "m3.medium", "m3.large", "m3.xlarge", "m3.2xlarge",
+        "c4.large", "c4.xlarge", "c4.2xlarge", "c4.4xlarge", "c4.8xlarge", "c3.large", "c3.xlarge", "c3.2xlarge", "c3.4xlarge", "c3.8xlarge",
+        "r3.large", "r3.xlarge", "r3.2xlarge", "r3.4xlarge", "r3.8xlarge",
+        "i2.xlarge", "i2.2xlarge", "i2.4xlarge", "i2.8xlarge", "hs1.8xlarge",
+        "g2.2xlarge"
+      ],
+      "ConstraintDescription" : "must be a valid, HVM-compatible EC2 instance type."
     },
     "KeyName" : {
-      "Description" : "Name of an existing EC2 keypair to enable SSH access to the instances",
+      "Description" : "Existing EC2 KeyPair to be associated with all cluster instances for SSH access. For default AMIs, log in as the 'ubuntu' user.",
       "Type" : "String"
     },
     "ClusterSize" : {
@@ -60,28 +66,28 @@
   "Mappings" : {
     "RegionMap" : {
       "us-east-1" : {
-        "AMI" : "ami-f40bbe9c"
+        "AMI" : "ami-9effd3f6"
       },
       "us-west-1" : {
-        "AMI" : "ami-cfe2ea8a"
+        "AMI" : "ami-b9799ffd"
       },
       "us-west-2" : {
-        "AMI" : "ami-3fb1f20f"
+        "AMI" : "ami-3fe5c90f"
       },
       "eu-west-1" : {
-        "AMI" : "ami-e0d27397"
+        "AMI" : "ami-df9a04a8"
       },
       "ap-southeast-1" : {
-        "AMI" : "ami-8a7057d8"
+        "AMI" : "ami-a8bf8efa"
       },
       "ap-southeast-2" : {
-        "AMI" : "ami-d5c1a2ef"
+        "AMI" : "ami-25f7871f"
       },
       "ap-northeast-1" : {
-        "AMI" : "ami-a7def7a6"
+        "AMI" : "ami-7f48bf7f"
       },
       "sa-east-1" : {
-        "AMI" : "ami-070fa51a"
+        "AMI" : "ami-c311a9de"
       }
     }
   },
