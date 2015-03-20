@@ -32,12 +32,12 @@ Inbound rules are at your discretion, but you may want to include access to:
 ### 3. Launch the stack
 Launch the stack via the AWS console, a script, or [aws-cli](https://github.com/aws/aws-cli).
 
-See `zookeeper-vpc.json` for the full list of parameters, descriptions, and default values.
+See `zookeeper.json` for the full list of parameters, descriptions, and default values.
 
 Example using `aws-cli`:
 ```bash
 aws cloudformation create-stack \
-    --template-body file://zookeeper-vpc.json \
+    --template-body file://zookeeper.json \
     --stack-name <stack> \
     --capabilities CAPABILITY_IAM \
     --parameters \
