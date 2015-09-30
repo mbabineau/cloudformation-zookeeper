@@ -153,6 +153,11 @@
             "Key" : "role",
             "Value" : "zookeeper",
             "PropagateAtLaunch" : "true"
+          },
+          {
+            "Key" : "Name",
+            "Value" : "zookeeper-exhibitor",
+            "PropagateAtLaunch" : "true"
           }
         ]
       }
