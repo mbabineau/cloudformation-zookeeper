@@ -29,7 +29,10 @@ Inbound rules are at your discretion, but you may want to include access to:
 * `2181 [tcp]` - ZooKeeper client port
 * `8181 [tcp]` - Exhibitor HTTP port (for both web UI and REST API)
 
-### 3. Launch the stack
+### 3. Create S3 bucket
+Exhibitor uses S3 bucket to backup zookeeper data. You need to create a S3 bucket in order to use exhibitor. Create a bucket and specify the bucket name below.
+
+### 4. Launch the stack
 Launch the stack via the AWS console, a script, or [aws-cli](https://github.com/aws/aws-cli).
 
 See `zookeeper.json` for the full list of parameters, descriptions, and default values.
@@ -50,7 +53,7 @@ aws cloudformation create-stack \
         ParameterKey=AdminSecurityGroup,ParameterValue=<sg_id>
 ```
 
-### 4. Watch the cluster converge
+### 5. Watch the cluster converge
 Once the stack has been provisioned, visit `http://<host>:8181/exhibitor/v1/ui/index.html` on one of the nodes. You will need to do this from a location granted access by the specified `AdminSecurityGroup`.
 
 _Note the Docker image may take several minutes to retrieve. This can be improved with the use of a private Docker registry._
