@@ -48,6 +48,7 @@ aws cloudformation create-stack \
         ParameterKey=VpcId,ParameterValue=<vpc_id> \
         ParameterKey=Subnets,ParameterValue='<subnet_id_1>\,<subnet_id_2>' \
         ParameterKey=AdminSecurityGroup,ParameterValue=<sg_id>
+        ParameterKey=AssociatePublicIpAddress,ParameterValue=<true_or_false>
 ```
 
 ### 4. Watch the cluster converge
